@@ -62,8 +62,10 @@ BOOL strip_chunk( FILE* png_handle, const char* chunk_name,
 BOOL dump_chunk( FILE* file_handle,
 	unsigned long target_chunk_index );
 
-// file_io.c
+// utilities.c
 BOOL read_bytes( FILE* file_handle, size_t len, BYTE* buffer );
+void free_chunk( chunk* chunk_ptr );
+BOOL is_string_number( const char* string, size_t len );
 
 // main.c
 uint8_t get_number_length( int64_t number );
