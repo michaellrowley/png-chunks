@@ -1,5 +1,7 @@
 #include "png-cmd.h"
 
+#include <ctype.h>
+
 void free_chunk( pchunk chnk ) {
 	if ( chnk->data != nullptr ) {
 		free( chnk->data );
